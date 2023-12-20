@@ -85,19 +85,33 @@ FROM friends_of_pickles
 GROUP BY species;
 
 -- Lesson 18: Nested queries
-
+SELECT * 
+FROM family_members
+WHERE num_books_read = (SELECT MAX(num_books_read) FROM family_members);
 
 -- Lesson 19: NULL
-
+SELECT * 
+FROM family_members 
+WHERE favorite_book IS NOT NULL;
 
 -- Lesson 20: Date
-
+SELECT * 
+FROM celebs_born
+WHERE birthdate > '1980-09-01';
 
 -- Lesson 21: Inner joins
-
+SELECT character.name, character_actor.actor_name
+FROM character
+INNER JOIN character_actor
+ON character.id = character_actor.character_id;
 
 -- Lesson 22: Multiple joins
-
+SELECT character.name, actor.name 
+FROM character 
+INNER JOIN character_actor 
+ON character.id = character_actor.character_id 
+INNER JOIN actor 
+ON character_actor.actor_id = actor.id;
 
 -- Lesson 23: Joins with WHERE
 
