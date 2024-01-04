@@ -1,4 +1,4 @@
--- Lesson 1 Project:
+/*Lesson 1 Project:*/
 
 CREATE table bicycle_shop (id INTEGER primary key, brand TEXT, style TEXT, size INTEGER, inventory INTEGER, price INTEGER);
 
