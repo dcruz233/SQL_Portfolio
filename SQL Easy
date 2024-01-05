@@ -1,4 +1,4 @@
--- PRACTICE QUESTIONS FROM www.sql-easy.com --
+/* PRACTICE QUESTIONS FROM www.sql-easy.com */
 
 
 -- Lesson 1: SELECT *
@@ -154,14 +154,25 @@ INNER JOIN employees AS e2
 ON e1.boss_id = e2.id;
 
 -- Lesson 28: LIKE
-
+SELECT *
+FROM robots
+WHERE name LIKE "%Robot 20%%";
 
 -- Lesson 29: CASE
-
+SELECT *,
+  CASE 
+    WHEN species = "human" THEN "talk"
+    WHEN species = "dog" THEN "bark"
+    ELSE "meow"
+  END AS sound
+FROM friends_of_pickles;
 
 -- Lesson 30: SUBSTR
-
+SELECT *
+FROM robots
+WHERE SUBSTR(location, -2) = "NY";
 
 -- Lesson 31: COALESCE
-
+SELECT name, COALESCE(tank, gun, sword) AS weapon
+FROM fighters;
 
