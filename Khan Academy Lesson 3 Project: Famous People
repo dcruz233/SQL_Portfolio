@@ -1,0 +1,36 @@
+CREATE TABLE athletes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    age INTEGER,
+    sport TEXT);
+    
+INSERT INTO athletes (fullname, age, sport) VALUES ("Cristiano Ronaldo", 36, "Soccer");
+INSERT INTO athletes (fullname, age, sport) VALUES ("LeBron James", 36, "Basketball");
+INSERT INTO athletes (fullname, age, sport) VALUES ("Lionel Messi", 34, "Soccer");
+INSERT INTO athletes (fullname, age, sport) VALUES ("Serena Williams", 39, "Tennis");
+INSERT INTO athletes (fullname, age, sport) VALUES ("Tom Brady", 44, "Football");
+INSERT INTO athletes (fullname, age, sport) VALUES ("Lewis Hamilton", 36, "Formula 1");
+INSERT INTO athletes (fullname, age, sport) VALUES ("Usain Bolt", 35, "Track and Field");
+INSERT INTO athletes (fullname, age, sport) VALUES ("Simone Biles", 24, "Gymnastics");
+INSERT INTO athletes (fullname, age, sport) VALUES ("Virat Kohli", 32, "Cricket");
+INSERT INTO athletes (fullname, age, sport) VALUES ("Naomi Osaka", 23, "Tennis");
+
+CREATE table wealth (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    athletes_id INTEGER,
+    net_worth INTEGER);
+    
+INSERT INTO wealth (athletes_id, net_worth) VALUES (1, 500000000);
+INSERT INTO wealth (athletes_id, net_worth) VALUES (2, 500000000);
+INSERT INTO wealth (athletes_id, net_worth) VALUES (3, 400000000);
+INSERT INTO wealth (athletes_id, net_worth) VALUES (4, 225000000);
+INSERT INTO wealth (athletes_id, net_worth) VALUES (5, 250000000);
+INSERT INTO wealth (athletes_id, net_worth) VALUES (6, 285000000);
+INSERT INTO wealth (athletes_id, net_worth) VALUES (7, 90000000);
+INSERT INTO wealth (athletes_id, net_worth) VALUES (8, 6000000);
+INSERT INTO wealth (athletes_id, net_worth) VALUES (9, 125000000);
+INSERT INTO wealth (athletes_id, net_worth) VALUES (10, 25000000);
+
+
+SELECT athletes.*, wealth.net_worth FROM athletes 
+JOIN wealth ON athletes.id = wealth.athletes_id;
