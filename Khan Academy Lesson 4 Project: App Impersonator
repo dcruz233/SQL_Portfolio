@@ -1,0 +1,30 @@
+CREATE TABLE ListeningHistory (
+    ListeningID INTEGER PRIMARY KEY, 
+    UserID INTEGER,
+    SongID INTEGER,
+    Timestamp INTEGER,
+    Device TEXT
+);
+
+INSERT INTO ListeningHistory (ListeningID, UserID, SongID, Timestamp, Device)
+VALUES
+    (1, 1, 1, 1641350400, 'Mobile'),
+    (2, 2, 2, 1641361200, 'Desktop'),
+    (3, 1, 3, 1641372000, 'Mobile'),
+    (4, 2, 1, 1641382800, 'Desktop'),
+    (5, 1, 2, 1641393600, 'Mobile'),
+    (6, 2, 3, 1641404400, 'Desktop'),
+    (7, 1, 1, 1641415200, 'Mobile'),
+    (8, 2, 2, 1641426000, 'Desktop'),
+    (9, 1, 3, 1641436800, 'Mobile'),
+    (10, 2, 1, 1641447600, 'Desktop')
+;
+
+UPDATE ListeningHistory
+SET Device = 'UpdatedMobile'
+WHERE ListeningID = 3;
+
+DELETE FROM ListeningHistory
+WHERE ListeningID = 6;
+
+SELECT * FROM ListeningHistory;
