@@ -1,4 +1,4 @@
-/*Lesson 2 Project: Data Dig*/
+/* Lesson 2 Project: Data Dig */
 
 CREATE TABLE solar_system_objects(
   body TEXT
