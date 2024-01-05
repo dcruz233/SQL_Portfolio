@@ -1,3 +1,5 @@
+/* Lesson 4 Project: App Impersonator */
+
 CREATE TABLE ListeningHistory (
     ListeningID INTEGER PRIMARY KEY, 
     UserID INTEGER,
